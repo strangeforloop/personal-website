@@ -1,47 +1,99 @@
-// import React from "react"
-// import { Link, graphql } from "gatsby"
+import React from "react"
+import { Link, graphql } from "gatsby"
+import SEO from "../components/seo"
+import Layout from "../components/layout"
+// import Styles from "../styles/styles.css"
 
-// import Layout from "../components/layout"
-// import SEO from "../components/seo"
+class BlogPlaceHolder extends React.Component {
+  // const BlogPlaceHolder = () => {
+  render() {
+    const { data } = this.props
+    const siteTitle = data.site.siteMetadata.title
+    const posts = data.allMarkdownRemark.edges
+    // console.log(this);
+    return (
+      <Layout location={this.props.location} >
+        <SEO title="Anna Agoha's Blog Posts" />
+        <section>
+          <h1>Blog Posts</h1>
+          {posts.map(({ node }) => {
+            const title = node.frontmatter.title || node.fields.slug
+            return (
+              <div key={node.fields.slug} className="mb-6">
+                <p className="">{node.fields.date}</p>
+                <h2 className="">
+                  <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
+                    {title}
+                  </Link>
+                </h2>
+                <p
+                  className=""
+                  dangerouslySetInnerHTML={{
+                    __html: node.frontmatter.description || node.excerpt,
+                  }}
+                />
+              </div>
+            )
+          })}
+        </section>
+      </Layout>
+    )
+  }
+}
 
-// class BlogIndex extends React.Component {
+export default BlogPlaceHolder
+
+
+export const pageQuery = graphql`
+  query {
+    site {
+      siteMetadata {
+        title
+      }
+    }
+    allMarkdownRemark(sort: {fields: id, order: DESC}) {
+      edges {
+        node {
+          excerpt
+          fields {
+            slug
+          }
+          frontmatter {
+            title
+            description
+          }
+        }
+      }
+    }
+  }
+`
+
+
+// class BlogPlaceHolder extends React.Component {
+//   // const BlogPlaceHolder = () => {
 //   render() {
 //     const { data } = this.props
 //     const siteTitle = data.site.siteMetadata.title
 //     const posts = data.allMarkdownRemark.edges
-
+//     console.log(this);
 //     return (
-//       <Layout location={this.props.location} title={siteTitle}>
-//         <SEO title="All posts" />
-//         <section className="container max-w-5xl mx-auto mt-5 px-4 lg:px-0 lg:py-4" id="blogPage">
-//           <h1 className="text-3xl mb-5 font-thin">Blog posts</h1>
-//           {posts.map(({ node }) => {
-//             const title = node.frontmatter.title || node.fields.slug
-//             return (
-//               <div key={node.fields.slug} className="mb-6">
-//                 <p className="text-sm text-gray-600">{node.fields.date}8p
-//                 |</p>
-//                 <h2 className="text-xl text-blue-500 font-normal hover:underline">
-//                   <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
-//                     {title}
-//                   </Link>
-//                 </h2>
-//                 <p
-//                   className="mt-1 text-gray-700"
-//                   dangerouslySetInnerHTML={{
-//                     __html: node.frontmatter.description || node.excerpt,
-//                   }}
-//                 />
-//               </div>
-//             )
-//           })}
-//         </section>
+//       <Layout location={this.props.location} >
+//         <SEO title="Anna Agoha's Blog Posts" />
+//         <div id="placeHolderContent">
+//           <div id="placeHolderMessage">
+//             Coming very soon!
+//         </div>
+//           <div id="placeHolderImage">
+//             <img src="http://placekitten.com/g/300/300" alt="a little"></img>
+//           </div>
+//         </div>
 //       </Layout>
 //     )
 //   }
 // }
 
-// export default BlogIndex
+// export default BlogPlaceHolder
+
 
 // export const pageQuery = graphql`
 //   query {
@@ -50,16 +102,12 @@
 //         title
 //       }
 //     }
-//     allMarkdownRemark(
-//       sort: { fields: [fields___date], order: DESC }
-//       filter: { fields: { slug: { regex: "^/blog/" } } }
-//     ) {
+//     allMarkdownRemark(sort: {fields: id, order: DESC}) {
 //       edges {
 //         node {
 //           excerpt
 //           fields {
 //             slug
-//             date(formatString: "D MMMM YYYY")
 //           }
 //           frontmatter {
 //             title
@@ -70,3 +118,4 @@
 //     }
 //   }
 // `
+
