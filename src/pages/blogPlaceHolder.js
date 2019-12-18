@@ -37,8 +37,8 @@ const BlogPlaceHolder = () => {
   // const posts = data.allMarkdownRemark.edges
 
   return (
-    <Layout location={this.props.location} >
-      {/* <Layout> */}
+    // <Layout location={this.props.location} >
+    <Layout>
       <SEO title="Anna Agoha's Blog" />
       <div id="placeHolderContent">
         <div id="placeHolderMessage">
