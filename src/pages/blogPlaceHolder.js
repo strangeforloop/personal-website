@@ -6,25 +6,27 @@ import Layout from "../components/layout"
 // import SEO from "../components/seo"
 // import Styles from "../styles/styles.css"
 
-const BlogPlaceHolder = () => {
-  // const { data } = this.props
-  // const siteTitle = data.site.siteMetadata.title
-  // const posts = data.allMarkdownRemark.edges
-
-  return (
-    // <Layout location={this.props.location} >
-    <Layout>
-      <SEO title="Anna Agoha's Blog" />
-      <div id="placeHolderContent">
-        <div id="placeHolderMessage">
-          Coming very soon!
+class BlogPlaceHolder extends React.Component {
+  // const BlogPlaceHolder = () => {
+  render() {
+    const { data } = this.props
+    const siteTitle = data.site.siteMetadata.title
+    const posts = data.allMarkdownRemark.edges
+    console.log(this);
+    return (
+      <Layout location={this.props.location} >
+        <SEO title="Anna Agoha's Blog Posts" />
+        <div id="placeHolderContent">
+          <div id="placeHolderMessage">
+            Coming very soon!
         </div>
-        <div id="placeHolderImage">
-          <img src="http://placekitten.com/g/300/300" alt="a little"></img>
+          <div id="placeHolderImage">
+            <img src="http://placekitten.com/g/300/300" alt="a little"></img>
+          </div>
         </div>
-      </div>
-    </Layout>
-  )
+      </Layout>
+    )
+  }
 }
 
 export default BlogPlaceHolder
