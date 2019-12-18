@@ -46,11 +46,70 @@ module.exports = {
       },
     },
     `gatsby-transformer-sharp`,
+    // `gatsby-plugin-sharp`,
+    // {
+    //   resolve: `gatsb y-plugin-google-analytics`,
+    //   options: {
+    //     //trackingId: `ADD YOUR TRACKING ID HERE`,
+    //   },
+    // },
     `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        //trackingId: `ADD YOUR TRACKING ID HERE`,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-feed`,
+      options: {
+        query: `
+          {
+            site {
+              siteMetadata {
+                title
+                description
+                siteUrl
+                site_url: siteUrl
+              }
+            }
+          }
+        `,
+        feeds: [
+          {
+            serialize: ({ query: { site, allMarkdownRemark } }) => {
+              return allMarkdownRemark.edges.map(edge => {
+                return Object.assign({}, edge.node.frontmatter, {
+                  description: edge.node.excerpt,
+                  date: edge.node.fields.date,
+                  url: site.siteMetadata.siteUrl + edge.node.fields.slug,
+                  guid: site.siteMetadata.siteUrl + edge.node.fields.slug,
+                  custom_elements: [{ "content:encoded": edge.node.html }],
+                })
+              })
+            },
+            query: `
+            {
+              allMarkdownRemark(sort: {fields: [fields___date], order: DESC}, filter: {fields: {slug: {regex: "^/blog/"}}}, limit: 20) {
+                edges {
+                  node {
+                    excerpt
+                    html
+                    fields {
+                      slug
+                      date
+                    }
+                    frontmatter {
+                      title
+                    }
+                  }
+                }
+              }
+            }
+            `,
+            output: "/feed.xml",
+            title: "Anna Agoha's Blog RSS Feed",
+          },
+        ],
       },
     },
     `gatsby-plugin-feed`,
