@@ -1,6 +1,5 @@
 import React from "react"
 import { Link } from "gatsby"
-// import Styles from "../styles/styles.css"
 import "../styles/style.css"
 
 const NavigationMenu = () => {
