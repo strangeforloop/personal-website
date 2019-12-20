@@ -40,7 +40,7 @@ exports.createPages = async ({ graphql, actions }) => {
 
     createPage({
       path: post.node.fields.slug,
-      component: blogPost,
+      component: blogPostTemplate,
       context: {
         slug: post.node.fields.slug,
         previous,
@@ -50,6 +50,7 @@ exports.createPages = async ({ graphql, actions }) => {
   })
 }
 
+
 exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions
 
@@ -58,7 +59,13 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
     createNodeField({
       name: `slug`,
       node,
-      value,
+      value: `/blog/${filename}`,
+    })
+  } else {
+    createNodeField({
+      name: `slug`,
+      node,
+      value: slug,
     })
   }
 }

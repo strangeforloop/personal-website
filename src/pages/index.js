@@ -12,7 +12,7 @@ class Index extends React.Component {
     const siteTitle = data.site.siteMetadata.title
 
     return (
-      < Layout location={this.props.location} title={siteTitle} >
+      <Layout location={this.props.location} title={siteTitle} >
         <SEO title="Anna Agoha's website and blog" />
         <div id="home-content">
           <header className="content" id="intro-section">

@@ -25,7 +25,7 @@ const NavigationMenu = () => {
             Blog
           </Link> */}
           <Link
-            to={`/blogPlaceHolder/`}
+            to={`/blog/`}
             className="navLink"
           >
             Blog
