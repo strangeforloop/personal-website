@@ -29,6 +29,7 @@ a {
 .navLink {
   /* color: #66B3BA; */
   color: #56A3A6;
+  color: #2f8083;
   padding: 1rem 1.5rem;
   font-weight: 500;
   font-size: 1.2rem;
@@ -83,9 +84,10 @@ a {
 }
 
 #name {
-  color: #f7a4a9;
   /* color: #f3b2b6; */
   /* color: #f687b3; */
+  color: #f7a4a9;
+  color: #D2527F;
   /* font-size: 4.5rem; */
   font-size: calc(60px + (90 - 60) * ((100vw - 512px) / (1600 - 512)));
 }
@@ -117,8 +119,9 @@ a {
 
 .connectLink {
   font-weight: 500;
-  color: #4299e1;
   /* color: #f3b2b6; */
+  color: #4299e1;
+  color: #4692A3;
 }
 
 .connectLink:hover {

@@ -28,9 +28,10 @@
 }
 
 .intro-name {
-  color: #f7a4a9;
+  /* color: #f7a4a9; */
   /* color: #f3b2b6; */
   /* color: #f687b3; */
+  color: #D2527F;
   /* font-size: 4.5rem; */
   font-size: calc(60px + (90 - 60) * ((100vw - 512px) / (1600 - 512)));
 }
