@@ -1,10 +1,12 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 import SEO from "../components/seo"
-import Layout from "../components/layout/layout"
+import Layout from "../components/layout"
+// import Styles from "../styles/styles.css"
 import blogStyle from "../styles/blogPage.module.css"
 
-class Blog extends React.Component {
+class BlogPlaceHolder extends React.Component {
+  // const BlogPlaceHolder = () => {
   render() {
     const { data } = this.props
     const siteTitle = data.site.siteMetadata.title
@@ -13,7 +15,7 @@ class Blog extends React.Component {
     return (
       <Layout location={this.props.location} >
         <SEO title={siteTitle} />
-        <div className={blogStyle.content}>
+        <div>
           <p className={blogStyle.pageTitle}>Writings</p>
           <section className={blogStyle.allPosts}>
             {posts.map(({ node }) => {
@@ -22,7 +24,7 @@ class Blog extends React.Component {
                 <div key={node.fields.slug} className={blogStyle.post}>
                   <p className="">{node.fields.date}</p>
                   <h2 className="">
-                    <Link className={blogStyle.postTitle} to={`/blog${node.fields.slug}`}>
+                    <Link style={{ boxShadow: `none` }} to={`/blog${node.fields.slug}`}>
                       {title}
                     </Link>
                   </h2>
@@ -42,7 +44,8 @@ class Blog extends React.Component {
   }
 }
 
-export default Blog
+export default BlogPlaceHolder
+
 
 export const pageQuery = graphql`
   query {

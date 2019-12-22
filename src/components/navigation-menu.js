@@ -17,6 +17,12 @@ const NavigationMenu = () => {
           >
             Home
           </Link>
+          {/* <Link
+            to={`/blog/`}
+            className="navLink"
+          >
+            Blog
+          </Link> */}
           <Link
             to={`/blog/`}
             className="navLink"

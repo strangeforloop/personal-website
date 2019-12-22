@@ -11,8 +11,9 @@
     flex: 1 0 50vh;
     /* position: relative; */
     display: flex;
-    /* padding: 48px +  */
-   
+    /* create a minimum height so it doesn't get overlapped 
+      padding: 48px + 
+    */
 }
 
 .intro-text {
