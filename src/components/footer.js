@@ -1,12 +1,18 @@
 import React from "react"
-// import { Link } from "gatsby"
+import footerStyle from "./footer.module.css"
+import { Link } from "gatsby"
 
 const Footer = () => {
   return (
-    <footer id="footer" className="bg-gray-700 py-10 mt-10 text-gray-200">
-      Blog made with love and Gatsby by Anna Agoha.
-      <div className="flex justify-center w-full">
-      </div>
+    <footer id="footer" className={footerStyle.message}>
+      Website made with love and            
+      <Link
+        to={`/`}
+        className={footerStyle.footerLink}
+      > {" "}
+        Gatsby
+      </Link>
+      {" "} by Anna Agoha.
     </footer>
   )
 }

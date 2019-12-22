@@ -1,0 +1,25 @@
+.content {
+  padding: 0 1em;
+}
+
+.title {
+  color: #1F8286;
+  /* color: #18686b; */
+}
+
+.navigation {
+  padding: 0 1rem;
+}
+
+@media (min-width: 1040px) {
+  .content {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 0;
+  }
+
+  .navigation {
+    padding: 0 2rem;
+  }
+}

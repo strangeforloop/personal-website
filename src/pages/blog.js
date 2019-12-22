@@ -2,7 +2,6 @@ import React from "react"
 import { Link, graphql } from "gatsby"
 import SEO from "../components/seo"
 import Layout from "../components/layout"
-// import Styles from "../styles/styles.css"
 import blogStyle from "../styles/blogPage.module.css"
 
 class BlogPlaceHolder extends React.Component {
@@ -15,7 +14,7 @@ class BlogPlaceHolder extends React.Component {
     return (
       <Layout location={this.props.location} >
         <SEO title={siteTitle} />
-        <div>
+        <div className={blogStyle.content}>
           <p className={blogStyle.pageTitle}>Writings</p>
           <section className={blogStyle.allPosts}>
             {posts.map(({ node }) => {
@@ -24,7 +23,7 @@ class BlogPlaceHolder extends React.Component {
                 <div key={node.fields.slug} className={blogStyle.post}>
                   <p className="">{node.fields.date}</p>
                   <h2 className="">
-                    <Link style={{ boxShadow: `none` }} to={`/blog${node.fields.slug}`}>
+                    <Link className={blogStyle.postTitle} to={`/blog${node.fields.slug}`}>
                       {title}
                     </Link>
                   </h2>

@@ -15,19 +15,13 @@ const NavigationMenu = () => {
             to={`/`}
             className="navLink"
           >
-            Home
+            home
           </Link>
-          {/* <Link
-            to={`/blog/`}
-            className="navLink"
-          >
-            Blog
-          </Link> */}
           <Link
             to={`/blog/`}
             className="navLink"
           >
-            Blog
+            blog
           </Link>
         </div>
       </div>

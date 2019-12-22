@@ -7,6 +7,10 @@ a {
   text-decoration: none;
 }
 
+.content {
+  padding: 0 4em;
+}
+
 .pageTitle {
   margin: 2vh auto;
   /* font-size: 4vw; */
@@ -18,8 +22,9 @@ a {
   /* margin: auto; */
 }
 
-.allPosts {
-  padding: 0 4em;
+.postTitle {
+  color: #1F8286;
+  box-shadow: none;
 }
 
 .post {
