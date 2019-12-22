@@ -1,12 +1,22 @@
+@font-face {
+  font-family: 'samble';
+  src: url('./samble/samble.otf');
+  font-style: normal;
+  font-weight: 200;
+}
+
 html {
  color: #1a202c;
  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
 a {
-  text-decoration: none;
+  /* text-decoration: none; */
 }
 
+.content {
+  padding: 0 4em;
+}
 .pageTitle {
   margin: 2vh auto;
   /* font-size: 4vw; */
@@ -18,8 +28,9 @@ a {
   /* margin: auto; */
 }
 
-.allPosts {
-  padding: 0 4em;
+.postTitle {
+  color: #2F8083;
+  box-shadow: none;
 }
 
 .post {
