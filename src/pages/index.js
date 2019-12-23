@@ -23,9 +23,23 @@ class Index extends React.Component {
           </section>
           <main className={homeStyle.bottomSection}>
             <div className={`${homeStyle.content} ${homeStyle.blurb}`}>
-                <p>
+                <p className={homeStyle.about}>
                   I am a <span className={homeStyle.occupation}>full-stack engineer</span> who believes in the power of technology to make positive changes in the world. My passion for finding creative solutions to problems is what led me into the profession of software engineering.
                 </p>
+                <div className={homeStyle.skillsSection}>
+                  <p>Here are some technologies I am experienced in:</p>
+                  <ul className={homeStyle.skillsList}>
+                    <li>JavaScript (ES6+)</li>
+                    <li>React</li>
+                    <li>HTML & (S)CSS</li>
+                    <li>Node.js</li>
+                    <li>PHP</li>
+                    <li>C++</li>
+                    <li>Java</li>
+                    <li>Python</li>
+                    <li>MySql</li>
+                  </ul>
+                </div>
                 <p className={homeStyle.connectMessage}>
                   Feel free to connect with me on{" "}
                   <a
