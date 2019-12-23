@@ -9,6 +9,7 @@ a {
 
 .content {
   padding: 0 4em;
+  flex: 1;
 }
 
 .pageTitle {
@@ -29,4 +30,14 @@ a {
 
 .post {
   margin-bottom: 4em;
+}
+
+.placeHolderWrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.placeHolderSpace {
+  flex-shrink: 0;
 }

@@ -14,29 +14,33 @@ class BlogPlaceHolder extends React.Component {
     return (
       <Layout location={this.props.location} >
         <SEO title={siteTitle} />
-        <div className={blogStyle.content}>
-          <p className={blogStyle.pageTitle}>Writings</p>
-          <section className={blogStyle.allPosts}>
-            {posts.map(({ node }) => {
-              const title = node.frontmatter.title || node.fields.slug
-              return (
-                <div key={node.fields.slug} className={blogStyle.post}>
-                  <p className="">{node.fields.date}</p>
-                  <h2 className="">
-                    <Link className={blogStyle.postTitle} to={`/blog${node.fields.slug}`}>
-                      {title}
-                    </Link>
-                  </h2>
-                  <p
-                    className=""
-                    dangerouslySetInnerHTML={{
-                      __html: node.frontmatter.description || node.excerpt,
-                    }}
-                  />
-                </div>
-              )
-            })}
-          </section>
+        <div className={blogStyle.placeHolderWrapper}>
+          <div className={blogStyle.content}>
+            <p className={blogStyle.pageTitle}>Writings</p>
+            <section className={blogStyle.allPosts}>
+              {posts.map(({ node }) => {
+                const title = node.frontmatter.title || node.fields.slug
+                return (
+                  <div key={node.fields.slug} className={blogStyle.post}>
+                    <p className="">{node.fields.date}</p>
+                    <h2 className="">
+                      <Link className={blogStyle.postTitle} to={`/blog${node.fields.slug}`}>
+                        {title}
+                      </Link>
+                    </h2>
+                    <p
+                      className=""
+                      dangerouslySetInnerHTML={{
+                        __html: node.frontmatter.description || node.excerpt,
+                      }}
+                    />
+                  </div>
+                )
+              })}
+            </section>
+          </div>
+          <div className={blogStyle.placeHolderSpace}>
+          </div>
         </div>
       </Layout>
     )

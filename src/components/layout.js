@@ -5,13 +5,13 @@ import layoutStyle from "./layout.module.css"
 
 const Layout = ({ wide, children }) => {
   return (
-    <div className={layoutStyle.html}>
-      <header id="header">
+    <div className={layoutStyle.wrapper}>
+      <header className={layoutStyle.header}>
         <NavigationMenu />
       </header>
-      <div>{wide}</div>
-      <main>{children}</main>
-      <Footer />
+      {/* <div>{wide}</div> */}
+      <main className={layoutStyle.body}>{children}</main>
+      <Footer className={layoutStyle.dooter}/>
     </div>
   )
 }
