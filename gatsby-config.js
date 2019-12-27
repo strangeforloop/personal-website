@@ -89,14 +89,13 @@ module.exports = {
             },
             query: `
             {
-              allMarkdownRemark(sort: {fields: [fields___date], order: DESC}, filter: {fields: {slug: {regex: "^/blog/"}}}, limit: 20) {
+              allMarkdownRemark(sort: {fields: frontmatter___date, order: DESC}, limit: 20) {
                 edges {
                   node {
                     excerpt
                     html
                     fields {
                       slug
-                      date
                     }
                     frontmatter {
                       title

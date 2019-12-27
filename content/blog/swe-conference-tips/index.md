@@ -1,6 +1,6 @@
 ---
 title: 5 Tips for the Society of Women Engineer's Conference
-date: "2019-12-07T22:12:03.284Z"
+date: "2019-12-07"
 description: "Tips for anyone planning to attend the Society of Women Engineer's Conference or any similar conference."
 tags:
 - conference
