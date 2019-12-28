@@ -9,7 +9,7 @@ tags:
 - society of women engineers
 ---
 
-I was involved in the Society of Women Engineer's organization through out university and this year I attended my the Society of Women Engineer's (SWE) National Conference from November 7 - 9 in Anaheim, California. I learned many lessons from that experience that I thought I'd share.
+I was involved in the Society of Women Engineer's organization throughout university and this year I attended my the Society of Women Engineer's (SWE) National Conference from November 7 - 9 in Anaheim, California. I learned many lessons from that experience that I thought I'd share.
 
 ## If you're thinking about going and want tips, I hope this blog post will help.
 
@@ -30,4 +30,4 @@ Recruiters are very unlikely to read your resume word-for word. It was found tha
 
 
 
-If you have an additional questions or want tips on the conference, feel free to email me.
+If you have an additional questions or want tips on the conference, feel free to email me at annaagoha@gmail.com.

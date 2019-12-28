@@ -8,7 +8,7 @@ a {
 }
 
 .content {
-  padding: 0 4em;
+  padding: 0 2em;
   flex: 1;
 }
 
@@ -40,4 +40,18 @@ a {
 
 .placeHolderSpace {
   flex-shrink: 0;
+}
+
+
+@media (min-width: 1040px) {
+  .content {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 0;
+  }
+
+  .navigation {
+    padding: 0 2rem;
+  }
 }

@@ -37,7 +37,7 @@ class Index extends React.Component {
                     <li>C++</li>
                     <li>Java</li>
                     <li>Python</li>
-                    <li>MySql</li>
+                    <li>MySQL</li>
                   </ul>
                 </div>
                 <p className={homeStyle.connectMessage}>

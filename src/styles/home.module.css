@@ -70,7 +70,9 @@
   /* margin: 0 8rem; */
   font-size: 0.7em;
   text-align: left;
-  margin: 0 8rem;
+  list-style-position: inside;
+  /* margin: 0 8rem; */
+  justify-content: center;
 }
 
 .connectMessage {
