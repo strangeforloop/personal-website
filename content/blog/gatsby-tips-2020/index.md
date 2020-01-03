@@ -35,8 +35,6 @@ A basic understanding of Gatsby, of course. [Here](https://www.gatsbyjs.org/tuto
 As of posting, there 300+ [Gatsby starter files](https://www.gatsbyjs.org/starters/?v=2) available to help you get started making the type of project you want.
 ![Examples of Gatsby Starter Files](./gatsby-starter-screenshot.png)
 
-Note that some starter files use npm and some use yarn for package installation. Make your life easier by using yarn for everything. I'm running on windows and was using npm via windows command prompt. I ended up running into issues because of this and switched to using git bash terminal and haven't faced these issues between competing package management since:
-
 ### 2. Advice for Issues with Gatsby CLI Being Removed
 It seems to be a fairly common issue to run into this error after installing various dependencies for your project:<br/><br/>
 `ERROR                              
@@ -47,7 +45,7 @@ removed the Gatsby CLI. Looking at similar issues on Github, it seems that somet
 
 ![gatsby develop github issue](./gatsby-develop-not-working.png)
 
-To fix this issue, I used yarn for dependency installs. I removed package.json and the /node_modules folder. Then I ran `yarn install` and added the packages I needed with Yarn instead of npm.
+To fix this issue, I used yarn for dependency installs. I removed `package.json` and the `/node_modules` folder. Then I ran `yarn install` and added the packages I needed with Yarn instead of npm.
 
 This solved my issue. For this reason, I'm currently using [Yarn](https://yarnpkg.com/) as my package manager of choice when working with Gatsby.
 
@@ -76,11 +74,11 @@ your component is not returning anything to render to the page.
 
 #### ENOENT: no such file or directory
 
-This can occur with changes to the /public folder, such as when you delete or rename a file in the /pages directory.<br/>
+This can occur with changes to the `/public` folder, such as when you delete or rename a file in the `/pages` directory.<br/>
 
 Why?<br/>
 
-Gatsby keeps track of these files in the .cache folder for the purpose of loading your site faster. So make sure you clear the cache to make sure that everything's up to date and Gatsby isn't trying to load something from cache that doesn't actually exist.<br/><br/> You can accomplish this by either deleting the .cache folder, running `gatsby clean`, or adding `gatsby clean` as a script in the package.json file like shown below<br/>
+Gatsby keeps track of these files in the `.cache` folder for the purpose of loading your site faster. So make sure you clear the cache to make sure that everything's up to date and Gatsby isn't trying to load something from cache that doesn't actually exist.<br/><br/> You can accomplish this by either deleting the `.cache folder`, running `gatsby clean`, or adding `gatsby clean` as a script in the `package.json` file like shown below.<br/>
 
 ```
 scripts": {
@@ -93,7 +91,9 @@ scripts": {
 This could mean you are trying to query for something that doesn't exist. My advice is to open the GraphiQL's interactive display to see what data you do have available. 
 
 ### 6. Use 'gatsby build' for Deployment
-When deploying  to any hosting site (in my case I used Netlify), make sure you run `gatsby build` instead of `gatsby develop`. Other wise, the hosting site won't build your project properly. <br/><br/>The two commands seem very similar-- because they are, but main difference is that `gatsby build` runs additional instructions such as creating the static HTML pages needed to be rendered by a browser.
+When deploying  to any hosting site (in my case, I used Netlify), make sure you run `gatsby build` instead of `gatsby develop`. Other wise, the hosting site won't build your project properly. <br/>
+
+The two commands seem very similar-- because they are, but main difference is that `gatsby build` runs additional instructions such as creating the static HTML pages needed to be rendered by a browser.
 
 ## BONUS: Other Helpful Resources:
 [The Many Styling Options for React](https://www.gatsbyjs.org/docs/styling/)
