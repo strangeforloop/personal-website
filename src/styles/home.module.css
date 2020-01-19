@@ -44,7 +44,7 @@
     /* padding: 3vh 0; */
     text-align: center;
     font-size: 1.75rem;
-    font-weight: 200;
+    font-weight: 150;
     font-size: calc(25px + (30 - 25) * ((100vw - 350px) / (1600 - 350)));
 }
 
@@ -63,6 +63,7 @@
 .skillsSection {
   margin-top: 2.5rem;
 }
+
 .skillsList {
   display: grid;
   grid-template-columns: repeat(2, auto);
@@ -98,4 +99,10 @@
   /* .intro-section {
     height: 440px;
   } */
+}
+
+@media (min-width: 765px) {
+  .skillsList {
+    grid-template-columns: repeat(3, auto);
+  }
 }

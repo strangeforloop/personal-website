@@ -18,7 +18,7 @@ class Index extends React.Component {
           <section className={`${homeStyle.content} ${homeStyle.introSection}`}>
             <h1 id="intro-text">
               Hello, my name is<br />
-              <span id="name">Anna Agoha</span>.
+              <span id="name">Anna Agoha</span>
             </h1>
           </section>
           <main className={homeStyle.bottomSection}>
