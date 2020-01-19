@@ -34,7 +34,7 @@ a {
   display: flex;
   /* put this back when the logo gets re-added */
   /* justify-content: space-between; */
-  justify-content: center;
+  justify-content: left;
   padding: 1.1rem 0 1.1rem 1.5rem;
   border-bottom: 1px solid #c1c7ce; 
   /* #838385; */

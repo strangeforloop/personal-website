@@ -16,7 +16,7 @@ class BlogPlaceHolder extends React.Component {
         <SEO title={siteTitle} />
         <div className={blogStyle.placeHolderWrapper}>
           <div className={blogStyle.content}>
-            <p className={blogStyle.pageTitle}>Writing</p>
+            <p className={blogStyle.pageTitle}>My Little Blog</p>
             <section className={blogStyle.allPosts}>
               {posts.map(({ node }) => {
                 const title = node.frontmatter.title || node.fields.slug
