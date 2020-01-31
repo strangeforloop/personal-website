@@ -3,8 +3,7 @@ import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import homeStyle from "../styles/index.module.css"
-// import "../styles/styles.css"
+import homeStyle from "../styles/index.module.scss"
 
 class Index extends React.Component {
   render() {

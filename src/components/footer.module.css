@@ -1,9 +1,11 @@
 .message {
   text-align: center;
+  font-size: 0.9rem;
 }
 
 .footerLink {
   color: #ffb8cb;
+  text-decoration: none;
 }
 
 .footer {
