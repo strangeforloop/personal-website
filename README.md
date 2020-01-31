@@ -5,7 +5,7 @@ GraphQL was used to access site data and blog information.
 
 ## :cherry_blossom: View Live :cherry_blossom:
 
-This website is hosted on [Netlify](https://www.netlify.com) for its features such as continuous deployment and can be seen [here](https://www.annaagoha.com).
+This website is hosted on [Netlify](https://www.netlify.com) and can be seen [here](https://www.annaagoha.com).
 <br/>
 
 ## :bridge_at_night: Structure
