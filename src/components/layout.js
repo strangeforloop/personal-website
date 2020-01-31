@@ -6,12 +6,14 @@ import layoutStyle from "./layout.module.css"
 
 const Layout = ({ wide, children }) => {
   return (
-    <div className={layoutStyle.main}>
-      <header className={layoutStyle.header}>
-        <NavigationMenu />
-      </header>
-      {/* <div>{wide}</div> */}
-      <main className={layoutStyle.body}>{children}</main>
+    <div className={layoutStyle.layoutBody}>
+      <section className={layoutStyle.headerAndBody}>
+        <header className={layoutStyle.header}>
+          <NavigationMenu />
+        </header>
+        {/* <div>{wide}</div> */}
+        <main className={layoutStyle.body}>{children}</main>
+      </section>
       <Footer className={layoutStyle.footer} />
     </div>
   )

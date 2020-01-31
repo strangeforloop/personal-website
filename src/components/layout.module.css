@@ -2,10 +2,10 @@
   --primary-pink: #D2527F;
   --teal-accent: #2f8083;
 }
- 
+/*  
 .container {
   padding: 0 1rem;
-}
+} */
 
 * {
   box-sizing: border-box;
@@ -13,12 +13,14 @@
   padding: 0;
 }
 
-html {
-  min-height: 100%;
-}
+/* html {
+  min-height: 100vh;
+} */
 
 body {
-  min-height: 100%;
+  min-height: 100vh;
+  padding: 0;
+  margin: 0;
   display: flex;
   flex-direction: column;
   color: #1a202c;
@@ -26,34 +28,42 @@ body {
    font-family: 'Merriweather', 'Georgia', serif;
 }
 
+.layoutBody {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.headerAndBody {
+  flex: 1 0 auto;
+}
+
 .footer {
-  margin-top: auto;
+  /* margin-top: auto; */
+  flex-shrink: 0;
 }
 
 a {
   /* takes out underlines from Gatsby links */
   box-shadow: none;
+  text-decoration: none;
 }
 
-body {
-  padding: 0;
-  margin: 0;
-}
 
-.content {
+/* .content {
   padding: 0 2em;
-}
+} */
 
 /* this aint doing anything */
-@media (min-width: 1040px) {
+/* @media (min-width: 1040px) {
   .content {
     width: 70%;
     margin-left: auto;
     margin-right: auto;
     padding: 0 0;
   }
-/* 
+
   .navigation {
     padding: 0 2rem;
-  } */
-}
+  } 
+} */
