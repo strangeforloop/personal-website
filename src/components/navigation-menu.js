@@ -1,25 +1,26 @@
 import React from "react"
 import { Link } from "gatsby"
-import "../styles/style.css"
+// import "../styles/style.scss"
+import navStyle from "./navigation-menu.module.scss"
 
 const NavigationMenu = () => {
   return (
-    <div className="content" id="navBar">
-      <div id="inner-header">
-        {/* <div id="logo">
+    <div className={navStyle.navBar}>
+      <div className={navStyle.innerHeader}>
+        <div id="logo">
           <Link to={`/`}>
           </Link>
-        </div> */}
-        <div id="navigationLinksContainer">
+        </div>
+        <div>
           <Link
             to={`/`}
-            className="navLink"
+            className={navStyle.navLink}
           >
             home
           </Link>
           <Link
             to={`/blog/`}
-            className="navLink"
+            className={navStyle.navLink}
           >
             blog
           </Link>

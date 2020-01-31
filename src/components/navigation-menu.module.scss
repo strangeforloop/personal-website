@@ -1,0 +1,32 @@
+@import "../styles/style.scss";
+
+.navBar {
+  padding: 1.5rem 0;
+  border-bottom: 1px solid #c1c7ce; 
+} 
+
+.navLink {
+  /* color: #66B3BA; */
+  /* color: #56A3A6; */
+  color: var(--teal-accent);
+  // padding-left: 1.5rem;
+  // padding-right: 1.5rem;   
+  font-weight: 500;
+  font-size: 1.2rem;
+  text-decoration: none;
+  @include flexible();
+}
+
+.inner-header {
+  display: flex;
+  /* put this back when the logo gets re-added */
+  /* justify-content: space-between; */
+  justify-content: left;
+}
+
+.logo {
+  width: 35px;
+  height: 35px;
+  background-color: red;
+  /* padding-left: 1.5rem; */
+}

@@ -3,7 +3,7 @@ import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import homeStyle from "../styles/home.module.css"
+import homeStyle from "../styles/index.module.css"
 // import "../styles/styles.css"
 
 class Index extends React.Component {
@@ -15,13 +15,13 @@ class Index extends React.Component {
       <Layout location={this.props.location} title={siteTitle} >
         <SEO title="Anna Agoha's website and blog" />
         <div className={homeStyle.homeContent}>
-          <section className={`${homeStyle.content} ${homeStyle.introSection}`}>
-            <h1 id="intro-text">
+          <section className={homeStyle.heroSection}>
+            <h1 className={homeStyle.heroText}>
               Hello, my name is<br />
-              <span id="name">Anna Agoha</span>
+              <span className={homeStyle.introName}>Anna Agoha</span>
             </h1>
           </section>
-          <main className={homeStyle.bottomSection}>
+          <article className={homeStyle.bottomSection}>
             <div className={`${homeStyle.content} ${homeStyle.blurb}`}>
                 <p className={homeStyle.about}>
                   I am a <span className={homeStyle.occupation}>full-stack engineer</span> who believes in the power of technology to make positive changes in the world. My passion for finding creative solutions to problems is what led me into the profession of software engineering.
@@ -62,7 +62,7 @@ class Index extends React.Component {
                   .
                 </p>
               </div>
-          </main>
+          </article>
         </div>
       </Layout >
     )
