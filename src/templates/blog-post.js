@@ -3,8 +3,7 @@ import { Link, graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-// import { rhythm, scale } from "../utils/typography"
-import postStyle from "./post.module.css"
+import postStyle from "./post.module.scss"
 
 class BlogPostTemplate extends React.Component {
   render() {
@@ -21,30 +20,12 @@ class BlogPostTemplate extends React.Component {
         <div className={postStyle.content}>
           <article>
             <header>
-              <h1
-                style={{
-                  // marginTop: rhythm(1),
-                  marginBottom: 0,
-                }} className={postStyle.title}
-              >
+              <h1 className={postStyle.title}>
                 {post.frontmatter.title}
               </h1>
-              <p
-                style={{
-                  // ...scale(-1 / 5),
-                  display: `block`
-                  // marginBottom: rhythm(1),
-                }} 
-              >
-                {post.frontmatter.date}
-              </p>
+              <p className={postStyle.postDate}> {post.frontmatter.date} </p>
             </header>
-            <section dangerouslySetInnerHTML={{ __html: post.html }} />
-            <hr
-              style={{
-                // marginBottom: rhythm(1),
-              }}
-            />
+            <section className={postStyle.postBodyText} dangerouslySetInnerHTML={{ __html: post.html }} />
           </article>
         </div>
         {/* <nav className={postStyle.navigation}>

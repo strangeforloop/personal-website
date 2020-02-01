@@ -2,7 +2,7 @@ import React from "react"
 import { Link, graphql } from "gatsby"
 import SEO from "../components/seo"
 import Layout from "../components/layout"
-import blogStyle from "../styles/blogPage.module.css"
+import blogStyle from "../styles/blogPage.module.scss"
 
 class BlogPlaceHolder extends React.Component {
   // const BlogPlaceHolder = () => {
@@ -14,33 +14,29 @@ class BlogPlaceHolder extends React.Component {
     return (
       <Layout location={this.props.location} >
         <SEO title={siteTitle} />
-        <div className={blogStyle.placeHolderWrapper}>
-          <div className={blogStyle.content}>
-            <p className={blogStyle.pageTitle}>My Little Blog</p>
-            <section className={blogStyle.allPosts}>
-              {posts.map(({ node }) => {
-                const title = node.frontmatter.title || node.fields.slug
-                return (
-                  <div key={node.fields.slug} className={blogStyle.post}>
-                    <p className="">{node.fields.date}</p>
-                    <h2 className="">
-                      <Link className={blogStyle.postTitle} to={`/blog${node.fields.slug}`}>
-                        {title}
-                      </Link>
-                    </h2>
-                    <p
-                      className=""
-                      dangerouslySetInnerHTML={{
-                        __html: node.frontmatter.description || node.excerpt,
-                      }}
-                    />
-                  </div>
-                )
-              })}
-            </section>
-          </div>
-          <div className={blogStyle.placeHolderSpace}>
-          </div>
+        <div className={blogStyle.content}>
+          <p className={blogStyle.pageTitle}>My Little Blog</p>
+          <section className={blogStyle.allPosts}>
+            {posts.map(({ node }) => {
+              const title = node.frontmatter.title || node.fields.slug
+              return (
+                <div key={node.fields.slug} className={blogStyle.post}>
+                  <p className="">{node.fields.date}</p>
+                  <h2 className="">
+                    <Link className={blogStyle.postTitle} to={`/blog${node.fields.slug}`}>
+                      {title}
+                    </Link>
+                  </h2>
+                  <p
+                    className={blogStyle.postDescription}
+                    dangerouslySetInnerHTML={{
+                      __html: node.frontmatter.description || node.excerpt,
+                    }}
+                  />
+                </div>
+              )
+            })}
+          </section>
         </div>
       </Layout>
     )
