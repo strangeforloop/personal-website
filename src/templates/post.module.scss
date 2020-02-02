@@ -10,6 +10,7 @@ header p {
 }
 
 header .postDate {
+  margin-top: 1rem;
   color: #424242;
 }
 
@@ -20,14 +21,15 @@ header .postDate {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 2rem;
   font-size: 46px;
-  font-size: calc(32px + (42 - 32) * ((100vw - 350px) / (1600 - 350)));  
+  font-size: calc(32px + (48 - 32) * ((100vw - 350px) / (1600 - 350)));  
   font-weight: 800;
-  line-height: 2.3rem;
+  line-height: 3.2rem;
 }
 
 .postBodyText {
-  font-size: 1.2rem;
+  margin-top: 3rem;
   font-size: calc(16px + (18 - 16) * ((100vw - 350px) / (1600 - 350)));
+  font-size: 1.1rem;
   line-height: 1.9rem;
 }
 
@@ -35,6 +37,9 @@ header .postDate {
   .content{
     @include flexible2();
     margin: 3rem 0;
+  }
+  .postBodyText {
+    font-size: 1.2rem;
   }
 }
 
