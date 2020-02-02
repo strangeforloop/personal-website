@@ -12,16 +12,16 @@
   // padding-left: 1.5rem;
   // padding-right: 1.5rem;   
   font-weight: 500;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   text-decoration: none;
-  @include flexible();
 }
 
-.inner-header {
+.innerHeader {
   display: flex;
   /* put this back when the logo gets re-added */
   /* justify-content: space-between; */
   justify-content: left;
+  @include flexible();
 }
 
 .logo {
@@ -29,4 +29,27 @@
   height: 35px;
   background-color: red;
   /* padding-left: 1.5rem; */
+}
+
+.innerHeader div .navLink:nth-child(2) {
+  padding-left: 2.5rem;
+}
+
+@media (min-width: 700px) {
+  .innerHeader {
+    @include flexible2();
+  }
+}
+
+@media (min-width: 1000px) {
+  .navBar {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .innerHeader {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }

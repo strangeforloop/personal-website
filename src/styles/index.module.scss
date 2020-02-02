@@ -46,7 +46,7 @@
   /* color: #f687b3; */
   color: #D2527F;
   font-size: calc(64px + (90 - 64) * ((100vw - 512px) / (1600 - 512)));
-  font-size: calc(57px + (90 - 57) * ((100vw - 512px) / (1600 - 512)));
+  font-size: calc(58px + (94 - 58) * ((100vw - 512px) / (1600 - 512)));
 }
 
 /* Introduction */
@@ -75,7 +75,7 @@
   // font-size: 1.2rem;
   // font-weight: 200;
   font-size: calc(18px + (30 - 18) * ((100vw - 350px) / (1600 - 350)));
-  line-height: 2rem;
+  line-height: 2.1rem;
   font-weight: 300;
 }
 
@@ -88,7 +88,7 @@
 }
 
 .skillsList {
-  margin-top: 0.5rem;
+  margin-top: 2.5rem;
   display: grid;
   grid-template-columns: repeat(2, auto);
   column-gap: 2rem;
@@ -126,8 +126,36 @@
   } */
 // }
 
-@media (min-width: 765px) {
+@media (min-width: 700px) {
+  .heroText {
+    @include flexible2();
+  }
+  
+  .bottomSection {
+    @include flexible2();
+    padding: 3rem 0;
+  }
+
+  .blurb {
+    @include flexible2();
+    line-height: 2.5rem;
+  }
+
   .skillsList {
     grid-template-columns: repeat(3, auto);
+  }
+}
+
+@media (min-width: 1000px) {
+  .blurb {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+    line-height: 3.2rem;
+  }
+
+  .bottomSection {
+    padding: 4rem 0;
   }
 }

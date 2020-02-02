@@ -23,11 +23,35 @@
   color: #1F8286;
   box-shadow: none;
   font-weight: 800;
+  font-size: calc(24px + (29 - 24) * ((100vw - 350px) / (1600 - 350)));  
+  // font-size: 30px;  
 } 
 
 .postDescription {
   margin-top: 0.8rem;
-  line-height: 1.5rem;
+  font-size: calc(16px + (20 - 16) * ((100vw - 350px) / (1600 - 350)));
+  line-height: 1.7rem;
+}
+
+@media (min-width: 700px) {
+  .allPosts{
+    @include flexible2();
+
+  }
+
+  .pageTitle {
+    @include flexible2();
+  }
+}
+
+@media (min-width: 1000px) {
+  .allPosts,
+  .pageTitle {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+  }
 }
 
 @media (min-width: 1040px) {
